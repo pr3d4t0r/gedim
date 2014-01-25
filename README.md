@@ -53,6 +53,8 @@ for your questions.
 
 Project page:  http://github.com/pr3d4t0r/gedim
 
+Installation page:  http://www.vim.org/scripts/script.php?script_id=3196
+
 
 Contributors, license, other information:
 -----------------------------------------
