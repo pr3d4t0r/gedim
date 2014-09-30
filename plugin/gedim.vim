@@ -41,6 +41,9 @@
 "
 " Version history:
 " ----------------
+" 20140930              1.2b Tested under Windows Vista and found bugs in the OS service that
+"                            reports screen dimensions; recommendation:  upgrade to Windows 7
+"                            or later versions (Windows 8.1 as of today)
 " 20100903              1.2  Faster screen detection for OS X improvement - by Ludvig Ericson
 "                            Main display detection on MacVim / gVim running on Mac systems with
 "                            multiple displays - EC
