@@ -34,6 +34,7 @@
 " Scott Balmos          sbalmos@fastmail.fm           [TechGuy]
 " Nathan Tenney         ntenney@gmail.com
 " Ludvig Ericson        ludvig@sendpatch.se           lericson
+" Tobbe Lundberg        tobbe@tlundberg.com
 "
 " Special thanks to jamessan, spline, dmlloyd, bairu, graywh, and other denizens of the
 " #vim, ##mac, and other channels (irc://irc.freenode.net/#vim).
@@ -41,6 +42,7 @@
 "
 " Version history:
 " ----------------
+" 20161031              1.3  Fix for monitors with unknown resolutions on Windows.
 " 20140930              1.2b Tested under Windows Vista and found bugs in the OS service that
 "                            reports screen dimensions; recommendation:  upgrade to Windows 7
 "                            or later versions (Windows 8.1 as of today)
@@ -73,10 +75,10 @@ function! GEditorDimensions()
   let rez = "None"
   if has("gui_win32")
     " NEEDS ADDITIONAL TESTING BY A KIND WINDOWS USER!
-    let executable   = "wmic desktopmonitor get screenheight, screenwidth /format:csv | find \",\" | find /V \"ScreenHeight\""
+    let executable   = "wmic path Win32_VideoController get VideoModeDescription | find \" x \""
     let output       = system(executable)
-    let items        = split(split(output, "\r\n")[0], ",")
-    let g:rezWindows = items[2].",".items[1]
+    let items        = split(split(output, "\r\n")[0], " x ")
+    let g:rezWindows = items[0].",".items[1]
     let rez          = g:rezWindows
   endif
   if has("gui_gtk")
