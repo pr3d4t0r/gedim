@@ -77,10 +77,10 @@ built-in screen and an external 24" monitor: >
 If g:screenDimensions doesn't exist, or your current screen resolution isn't
 defined in the dictionary, the default editor dimentions will be 128@40.
 
-Note:  ATTENTION WINDOWS USERS! 
+Note:  ATTENTION WINDOWS USERS!
 The command that we use for figuring out the screen resolution may
 return width, height or height, width because it likes sorting the
-list before handing it back.  If you set your screenDimensions and 
+list before handing it back.  If you set your screenDimensions and
 it doesn't set the editor to the appropriate value, run this: >
 
   :echo g:rezWindows
@@ -91,11 +91,9 @@ dictionary, as resolved by the script.
 
 *gedim-about*
 
-Eugene Ciurana, http://eugeneciurana.com/contact or http://ciurana.eu/contact
-for your questions.
+Project page:  http://github.com/pr3d4t0r/gedim
 
-Project page:  http://eugeneciurana.com/gedim.vim
 
 For interactive discussions, find me as pr3d4t0r at
-irc://irc.freenode.net #python, ##java, #awk, #security, etc.
+irc://irc.libera.net #vim, #python, #awk, etc.
 
