@@ -7,7 +7,7 @@ also someone else's monitors, when I'm working remotely. This forces me to
 change the graphical Vim editor dimensions for every location where I happen to
 be. Though not complicated, it's annoying. That's why I wrote this script/Vim
 auto-command that does the job instead. Just define the desired editor columns
-and lines for a given resolution, and MacVim will open at that size every time 
+and lines for a given resolution, and MacVim will open at that size every time
 that the same resolution is detected.
 
 Features:
@@ -59,12 +59,12 @@ advised to use gVim (or equivalent) for Windows only on versions 7 and older
 Comments, questions, bug reports:
 ---------------------------------
 
-Eugene Ciurana, http://eugeneciurana.com/contact or http://ciurana.eu/contact
-for your questions.
-
 Project page:  http://github.com/pr3d4t0r/gedim
 
 Installation page:  http://www.vim.org/scripts/script.php?script_id=3196
+
+For interactive discussions, find me as pr3d4t0r at
+irc://irc.libera.net #vim, #python, #awk, etc.
 
 
 Contributors, license, other information:
@@ -74,5 +74,5 @@ Use the Force.  See the Source.
 **License:** 3-clause BSD.
 
 The gedim.vim source file features the contributors list, license and
-version history. 
+version history.
 
