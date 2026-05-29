@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+
+# +++ constants +++
+
+TARGET="gedim.zip"
+
+
+# *** main ****
+
+zip -9yr "$TARGET" doc/* plugin/*
+
+ls -Alrt "$TARGET"
+unzip -l "$TARGET"
+
