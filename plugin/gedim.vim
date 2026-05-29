@@ -105,5 +105,5 @@ function! GEditorDimensions()
   endif
 endfunction
 
-autocmd GUIEnter * call timer_start(50, {-> GEditorDimensions()})
+autocmd GUIEnter * call timer_start(350, {-> GEditorDimensions()})
 
