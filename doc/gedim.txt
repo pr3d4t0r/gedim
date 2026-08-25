@@ -36,7 +36,7 @@ Easy!  MacVim or gVim 7.0.1 or later.  Check with: >
 to see if this will work.  It *may* work with earlier versions but
 it wasn't tested.
 
-The code was tested on 7.0.1 and 7.0.2.
+The code was tested on 7.0.1 all the way to 9.2 and newer.
 
 The script calls these commands based on the environment where it runs:
 
