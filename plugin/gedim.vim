@@ -1,6 +1,6 @@
 " MacVim automatic editor resizing script.
 
-" Copyright (c) 2010, Eugene Ciurana (pr3d4t0r)
+" Copyright (c) 2010, 2026 Eugene Ciurana (pr3d4t0r)
 " All rights reserved.
 "
 " Redistribution and use in source and binary forms, with or without
@@ -42,6 +42,7 @@
 "
 " Version history:
 " ----------------
+" 20260825              1.5  fix for macOS physical vs virtual / scaled resoluiton
 " 20161031              1.3  Fix for monitors with unknown resolutions on Windows.
 " 20140930              1.2b Tested under Windows Vista and found bugs in the OS service that
 "                            reports screen dimensions; recommendation:  upgrade to Windows 7
@@ -86,7 +87,8 @@ function! GEditorDimensions()
     let rez        = system(executable)
   endif
   if has("gui_macvim")
-    let executable = "/usr/sbin/system_profiler SPDisplaysDataType | awk 'BEGIN { nX = 0; nY = 0; } function pR() { printf(\"%d,%d\", nX, nY); b = 1; } /Resolution:/ { nX = $2; nY = $4; } /Main Display:/ { if (\"Yes\" == $3) pR(); exit(0); } END { if (!b) pR(); }'"
+    " let executable = "/usr/sbin/system_profiler SPDisplaysDataType | awk 'BEGIN { nX = 0; nY = 0; } function pR() { printf(\"%d,%d\", nX, nY); b = 1; } /Resolution:/ { nX = $2; nY = $4; } /Main Display:/ { if (\"Yes\" == $3) pR(); exit(0); } END { if (!b) pR(); }'"
+    let executable = "/usr/bin/osascript -e 'tell application \"Finder\" to get bounds of window of desktop' | awk -F \",\" '{ printf(\"%d,%d\", $3, $4); }'"
     let rez        = system(executable)
   endif
   if has("gui_mac")
